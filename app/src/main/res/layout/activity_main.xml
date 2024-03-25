@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-
     <Button
         android:id="@+id/button"
         android:layout_width="183dp"
@@ -22,7 +20,7 @@
         android:id="@+id/button1"
         android:layout_width="183dp"
         android:layout_height="53dp"
-        android:text="Button"
+        android:text="@string/fragment1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +31,7 @@
         android:id="@+id/button2"
         android:layout_width="183dp"
         android:layout_height="53dp"
-        android:text="Button"
+        android:text="@string/fragment_saya"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
