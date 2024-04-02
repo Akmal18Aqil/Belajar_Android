@@ -21,18 +21,17 @@ class LatihanFragment : Fragment(),View.OnClickListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val button_category: Button = view.findViewById(R.id.button_category)
-        button_category.setOnClickListener(this)
+        val btnKategori: Button = view.findViewById(R.id.button_kategory)
+        btnKategori.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
-        if (v?.id == R.id.button_category){
+        if (v?.id == R.id.button_kategory){
             val kategoriFragment = KategoriFragment()
             val fragmentManager = parentFragmentManager
             fragmentManager.beginTransaction().apply {
                 replace(R.id.frame_fragmen, kategoriFragment, KategoriFragment::class.java.simpleName)
                 addToBackStack(null)
                 commit()
-
             }
         }
     }

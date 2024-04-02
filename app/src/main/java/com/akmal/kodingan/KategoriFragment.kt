@@ -19,13 +19,29 @@ class KategoriFragment : Fragment(),View.OnClickListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btnKategori: Button = view.findViewById(R.id.btn_detail_category)
+        val btnKategori: Button = view.findViewById(R.id.btn_detail_kategori)
         btnKategori.setOnClickListener(this)
 
     }
 
     override fun onClick(v: View?) {
-        TODO("Not yet implemented")
+        val detailKategoriFragment = DetailKategoriFragment()
+        val bundle = Bundle()
+        bundle.putString(DetailKategoriFragment.EXTRA_NAMA, "Sepak Bola")
+//        jika menggunakan argument semua maka ini diaktifkan
+//        bundle.putString(DetailKategoriFragment.EXTRA_DESKRIPSI, "KATEGORINYA OLAHRAGA")
+        val deskripsi = "KATEGORI DARI BIDANG OLAHRAGA"
+
+        detailKategoriFragment.arguments = bundle
+        detailKategoriFragment.deskripsi = deskripsi
+        val fragmentManager = parentFragmentManager
+        fragmentManager.beginTransaction().apply {
+            replace(R.id.frame_fragmen, detailKategoriFragment, DetailKategoriFragment::class.java.simpleName)
+            addToBackStack(null)
+            commit()
+        }
+
+
     }
 
 

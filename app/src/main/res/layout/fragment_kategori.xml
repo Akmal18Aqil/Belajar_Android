@@ -10,9 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="@string/this_category" />
+        android:text="fragmen Kategori" />
     <Button
-        android:id="@+id/btn_detail_category"
+        android:id="@+id/btn_detail_kategori"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/category_lifestyle" />
