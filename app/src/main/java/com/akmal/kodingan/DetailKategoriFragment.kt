@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 
 class DetailKategoriFragment : Fragment() {
@@ -46,6 +47,17 @@ class DetailKategoriFragment : Fragment() {
 //            val deskripsinya = arguments?.getString(EXTRA_DESKRIPSI)
             tvDeskripsi.text = deskripsi
             tvNamaKategori.text = namaKategori
+        }
+        btnTampilkanDialog.setOnClickListener {
+            val modalDialogFragment = ModalDialogFragment()
+            val fragmentManager = childFragmentManager
+            modalDialogFragment.show(fragmentManager, ModalDialogFragment::class.java.simpleName)
+        }
+    }
+
+    internal var dialogListener: ModalDialogFragment.onDialogListener = object: ModalDialogFragment.onDialogListener{
+        override fun onOptionPilih(text: String?){
+            Toast.makeText(requireActivity(), text, Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="22dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Pilih kategori di bawah ini!!"/>
+    <RadioGroup
+        android:id="@+id/rg_soal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rb_ananta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ananta"/>
+        <RadioButton
+            android:id="@+id/rb_winona"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Winona"/>
+        <RadioButton
+            android:id="@+id/rb_nanda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nanda"/>
+        <RadioButton
+            android:id="@+id/rb_mira"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Almira"/>
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_tutup"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_weight="0.5"
+            android:layout_marginEnd="9dp"
+            android:text="tutup"/>
+        <Button
+            android:id="@+id/btn_pilih"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_weight="0.5"
+            android:layout_marginEnd="9dp"
+            android:text="Pilih"/>
+
+    </LinearLayout>
+
+</LinearLayout>
